@@ -12,7 +12,7 @@ Created on Jan 29, 2024
 '''
 from skip.sexp.sourcefile import SourceFile
 from skip.eeschema.schematic.symbol import SymbolCollection, Symbol
-from skip.eeschema.sheet.sheet import SheetWrapper
+from skip.eeschema.sheet.sheet import SheetWrapper, SheetCollection
 from skip.eeschema.lib_symbol import LibSymbolsListWrapper
 from skip.eeschema.wire import WireCollection, WireWrapper
 from skip.eeschema.label import LabelCollection, LabelWrapper
@@ -97,7 +97,8 @@ class Schematic(SourceFile):
             'label': LabelCollection,
             'global_label': GlobalLabelCollection,
             'text': TextCollection,
-            'junction': JunctionCollection
+            'junction': JunctionCollection,
+            'sheet': SheetCollection
         }
     
     
@@ -106,13 +107,13 @@ class Schematic(SourceFile):
         
         dedicatedWrapper = {
             'symbol': Symbol,
-            'sheet': SheetWrapper,
             'lib_symbols': LibSymbolsListWrapper, # this single element acts like a list (children)
             'wire': WireWrapper,
             'label': LabelWrapper,
             'global_label': GlobalLabelWrapper,
             'text': TextWrapper,
-            'junction': JunctionWrapper
+            'junction': JunctionWrapper,
+            'sheet': SheetWrapper
         }
         if entity_type in dedicatedWrapper:
             return dedicatedWrapper[entity_type]

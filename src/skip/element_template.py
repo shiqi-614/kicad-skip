@@ -39,5 +39,38 @@ ElementTemplate = {
     
     'junction': [Symbol('junction'), [Symbol('at'), 50.8, 38.1], [Symbol('diameter'), 0], 
                  [Symbol('color'), 0, 0, 0, 0], 
-                 [Symbol('uuid'), Symbol('JUNKID')]]
+                 [Symbol('uuid'), Symbol('JUNKID')]],
+
+    'sheet': [
+        Symbol('sheet'),
+            [Symbol('at'), 280.416, 52.578],
+            [Symbol('size'), 12.7, 3.81],
+            [Symbol('fields_autoplaced')],
+            [Symbol('stroke'),
+                [Symbol('width'), 0.1524],
+                [Symbol('type'), Symbol('solid')]
+            ],
+            [Symbol('fill'),
+                [Symbol('color'), 0, 0, 0, 0.0000]
+            ],
+            [Symbol('uuid'), Symbol('SOMEUUID')],
+            [Symbol('property'), 'Sheetname', 'usb',
+                [Symbol('at'), 280.416, 51.8664, 0],
+                [Symbol('effects'),
+                    [Symbol('font'),
+                        [Symbol('size'), 1.27, 1.27]
+                    ],
+                    [Symbol('justify'), Symbol('left'), Symbol('bottom')]
+                ]
+            ],
+            [Symbol('property'), 'Sheetfile', 'default_usb.kicad_sch',
+                [Symbol('at'), 280.416, 56.9726, 0],
+                [Symbol('effects'),
+                    [Symbol('font'),
+                        [Symbol('size'), 1.27, 1.27]
+                    ],
+                    [Symbol('justify'), Symbol('left'), Symbol('top')]
+                ]
+            ]
+    ]
 }

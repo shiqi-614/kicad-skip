@@ -35,7 +35,8 @@ class PropertyCollection(NamedElementCollection):
         
     
     def property_changed(self, name:str, to_value:str, from_value:str):
-        self.parent.container.property_changed(name, to_value, from_value)
+        if self.parent.container:
+            self.parent.container.property_changed(name, to_value, from_value)
 
 class PropertyString(ArbitraryNamedParsedValueWrapper):
     
